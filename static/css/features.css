@@ -1,0 +1,178 @@
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: .75rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+.icon-link > .bi {
+  margin-top: .125rem;
+  margin-left: .125rem;
+  transition: transform .25s ease-in-out;
+  fill: currentColor;
+}
+.icon-link:hover > .bi {
+  transform: translate(.25rem);
+}
+
+.icon-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: .75rem;
+}
+
+.rounded-4 { border-radius: .5rem; }
+.rounded-5 { border-radius: 1rem; }
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  display: none;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+.card-container.flipped .card-back {
+  display: block;
+}
+
+.flip-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.flip-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+.box{
+    position: relative;
+
+    width: auto; 
+    height: 400px;
+}
+.box .front{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: 1s;
+}
+.box:hover .front{
+    transform: perspective(1000px) rotateY(180deg);
+}
+.box .back{
+    position: absolute;
+    top: 0;   left: 0;
+    width: 100%;  height: 100%;
+    
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(-180deg);
+    transition: 1s;
+}
+.box:hover .back{
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/**********  front  **************/
+.box .front .center{
+    position: absolute;
+    top: 50%;  left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.box .front .center img{
+    width: 100px;  height: 100px;
+}
+.box .front .center h1{
+    font-size: 25px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/**********  back  **************/
+.box .back .row{
+    position: relative;
+    width: 100%;  height: 50%;
+}
+.box .back .row:nth-of-type(1){
+    background: #fff;
+    box-sizing: border-box;
+    text-align: center;  line-height: 150px;
+}
+.box .back .row:nth-of-type(2){
+    background: #262626;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.box .back .row span:nth-of-type(1)::before{
+    content: '\f095';
+}
+.box .back .row span:nth-of-type(2)::before{
+    content: '\f003';
+}
+.box .back .row span:nth-of-type(3)::before{
+    content: '\f041';
+}
