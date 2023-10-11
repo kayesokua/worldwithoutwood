@@ -1,38 +1,73 @@
-const words = ['Pine', 'Cedar', 'Spruce', 'Larch', 'Fir', 'Oak','Ash','Beech','Birch','Maple'];
-let wordIndex = 0;
-let letterIndex = 0;
-let isDeleting = false;
+const woodWords = ['pine', 'larch', 'beech', 'spruce', 'maple', 'fir', 'oak', 'ash', 'cedar', 'birch'];
+const productWords2 = ['paper', 'cartons', 'furnitures', 'sportswear', 'lightweight cars', 'veneers', 'guitars'];
+const productWords = ['sawdust', 'bark', 'chips', 'pulp', 'shavings', 'resin', 'veneers','pellets','paving slabs'];
+
+
+let woodIndex = 0;
+let productIndex = 0;
+let woodLetterIndex = 0;
+let productLetterIndex = 0;
+let isDeletingWood = false;
+let isDeletingProduct = false;
 let typingSpeed = 75;
 
-    function type() {
-    const text = words[wordIndex];
-    const currentText = text.slice(0, letterIndex + 1);
+function typeWood() {
+    const text = woodWords[woodIndex];
+    const currentText = text.slice(0, woodLetterIndex + 1);
+    document.getElementById('woodtypes').textContent = currentText;
 
-    document.getElementById('typesofwood').textContent = currentText;
-
-    if (!isDeleting) {
-        letterIndex++;
+    if (!isDeletingWood) {
+        woodLetterIndex++;
     } else {
-        letterIndex--;
+        woodLetterIndex--;
     }
 
-    if (letterIndex === text.length + 1) {
-        isDeleting = true;
-        typingSpeed = 75;
+    if (woodLetterIndex === text.length + 1) {
+        isDeletingWood = true;
+        typingSpeed = 100;
     }
 
-    if (letterIndex === 0) {
-        isDeleting = false;
-        wordIndex++;
-        if (wordIndex === words.length) {
-            wordIndex = 0;
+    if (woodLetterIndex === 0) {
+        isDeletingWood = false;
+        woodIndex++;
+        if (woodIndex === woodWords.length) {
+            woodIndex = 0;
         }
-        typingSpeed = 75;
+        typingSpeed = 100;
     }
 
-    setTimeout(type, typingSpeed);
+    setTimeout(typeWood, typingSpeed);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(type, typingSpeed);
+function typeProduct() {
+    const text = productWords[productIndex];
+    const currentText = text.slice(0, productLetterIndex + 1);
+    document.getElementById('woodproducts').textContent = currentText;
+
+    if (!isDeletingProduct) {
+        productLetterIndex++;
+    } else {
+        productLetterIndex--;
+    }
+
+    if (productLetterIndex === text.length + 1) {
+        isDeletingProduct = true;
+        typingSpeed = 50;
+    }
+
+    if (productLetterIndex === 0) {
+        isDeletingProduct = false;
+        productIndex++;
+        if (productIndex === productWords.length) {
+            productIndex = 0;
+        }
+        typingSpeed = 50;
+    }
+
+    setTimeout(typeProduct, typingSpeed);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    typeWood();
+    setTimeout(typeProduct, typingSpeed);
 });

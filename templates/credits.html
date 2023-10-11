@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="World Without Wood">
+  <meta name="author" content="Kaye So Kua">
+  <title>{{title}}</title>
+
+  <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/features.css') }}" rel="stylesheet">
+
+
+</head>
+
+<body>
+  {% include 'components/google.html' %}
+  {% include 'components/navigation.html' %}
+
+  <main>
+
+    <section id="credits" class="d-flex justify-content-center border-bottom">
+      <a name="about"></a>
+      <div class="py-5 my-5 col-lg-8">
+        <h1 class="display-5 fw-bold text-center">Resources</h1>
+        
+        <h3>Research Papers</h3>
+        <ol>
+          <li>Graz University of Technology . Biobased Multifunctional Laminates in Batteryhousings. https://www.tugraz.at/projekte/biolib/home</li>
+          <li>Lyocell. (https://www.sciencedirect.com/topics/engineering/lyocell-fiber)</li>
+          <li></li>
+          <li>Source 4</li>
+        </ol>
+
+        <h3>Photography</h3>
+        <ul>
+          <li>"A newspaper lying over magazine" by <a href="https://unsplash.com/@ashni_ahlawat">@ashni_ahlawat</a></li>
+          <li>Lyocell clothing by Lyocell Info. https://lyocell.info/</li>
+        </ul>
+      </div>
+      </div>
+
+
+      </div>
+    </section>
+
+    <section id="team" class="bg-dark text-white">
+
+      <div class="container px-4 py-5 text-center">
+        <h2 class="mb-5">Meet the SKAJ Team & Sponsors</h2>
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                dy=".3em">140x140</text>
+            </svg>
+            <p class="mt-2">
+              <strong>Sabrina</strong> | Communication Wizard
+            </p>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                dy=".3em">140x140</text>
+            </svg>
+            <p class="mt-2">
+              <strong>Kaye</strong> | Out of the Box Thinker & Tech
+            </p>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                dy=".3em">140x140</text>
+            </svg>
+            <p class="mt-2">
+              <strong>Adriana</strong> | Wood Expert
+            </p>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Jakob</title>
+              <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                dy=".3em">140x140</text>
+            </svg>
+            <p class="mt-2">
+              <strong>Jakob</strong> | Wood Expert
+            </p>
+          </div>
+
+
+          <div class="col-sm-12 col-lg-12">
+            <h5 class="py-3">SPONSORED BY</h5>
+            <img
+              src="https://evergreen-innovationcamp.io/typo3conf/ext/theme_evergreen_innovationcamp/Resources/Public/Images/Logo/evergreen-innovation-camp-logo-dark.png"
+              class="img-fluid" style="height: 125px" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/intro.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/challenge.js') }}"></script>
+
+
+</body>
+
+</html>

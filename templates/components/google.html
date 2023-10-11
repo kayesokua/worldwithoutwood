@@ -1,0 +1,15 @@
+{% block content %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYLD1XF4TP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XYLD1XF4TP');
+
+    // Add the consent update code here
+    gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+    });
+</script>
+{% endblock %}
