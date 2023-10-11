@@ -44,7 +44,7 @@ def index():
             'source': 'https://www.nature.com/articles/ncomms8170'
         },
         {
-            'image_url':'https://en.wikipedia.org/wiki/File:Laminated_Veneer_Lumber.png',
+            'image_url':'https://source.unsplash.com/random/?laminated,wood',
             'title': 'Laminated Veneer Lumber',
             'content': 'Laminated veneer lumber (LVL) is significant in construction due to its superior strength and stability, which makes it a versatile and reliable material for various structural applications. Additionally, LVL use of smaller, fast-growing trees and efficient manufacturing processes contributes to sustainability and reduces the demand for large timber resources.',
             'source': 'steico.com'
