@@ -94,16 +94,6 @@ def credits():
         {
             "title": "The benefits of modern method of construction based on wood in the context of sustainability",
             "media": "International Journal of Environmental Science and Technology",
-            "url": "https://www.researchgate.net/profile/Elias-Hurmekoski-2/publication/291358292_Long-term_outlook_for_wood_construction_in_Europe/links/56a529cb08ae232fb207978e/Long-term-outlook-for-wood-construction-in-Europe.pdf "
-        },
-        {
-            "title": "The benefits of modern method of construction based on wood in the context of sustainability",
-            "media": "International Journal of Environmental Science and Technology",
-            "url": "https://link.springer.com/article/10.1007/s13762-017-1282-6 "
-        },
-        {
-            "title": "The benefits of modern method of construction based on wood in the context of sustainability",
-            "media": "International Journal of Environmental Science and Technology",
             "url": "https://www.researchgate.net/profile/Elias-Hurmekoski-2/publication/291358292_Long-term_outlook_for_wood_construction_in_Europe/links/56a529cb08ae232fb207978e/Long-term-outlook-for-wood-construction-in-Europe.pdf"
         },
         {
@@ -116,15 +106,25 @@ def credits():
             "media": "International Journal of Environmental Science and Technology",
             "url": "https://www.nature.com/articles/ncomms8170"
         },
-
-
-
-
-
-        
-
-
-
-
+        {
+            "title": "High-performance green flexible electronics based on biodegradable cellulose nanofibril paper",
+            "media": "International Journal of Environmental Science and Technology",
+            "url": "https://www.nature.com/articles/ncomms8170"
+        },
+        {
+            "title": "High-performance green flexible electronics based on biodegradable cellulose nanofibril paper",
+            "media": "International Journal of Environmental Science and Technology",
+            "url": "https://www.nature.com/articles/ncomms8170"
+        },
+        {
+            "title":  "Facts about Paper",
+            "media": "f-mp.de",
+            "url": "https://www.f-mp.de/res/expertenteam-papier/Papierherstellung.pdf"
+        },
+        {
+            "title": "Facts about Paper",
+            "media": "tis-gdv.de",
+            "url": "https://www.tis-gdv.de/tis/ware/papier/zeitung/zeitung-htm/"
+        },
     ]
     return render_template('credits.html', utc_dt=datetime.datetime.utcnow(), title="Credits", resources=resources)
