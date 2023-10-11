@@ -43,20 +43,15 @@
       <a name="about"></a>
       <div class="py-5 my-5 col-lg-8">
         <h1 class="display-5 fw-bold text-center">Resources</h1>
-        
-        <h3>Research Papers</h3>
-        <ol>
-          <li>Graz University of Technology . Biobased Multifunctional Laminates in Batteryhousings. https://www.tugraz.at/projekte/biolib/home</li>
-          <li>Lyocell. (https://www.sciencedirect.com/topics/engineering/lyocell-fiber)</li>
-          <li></li>
-          <li>Source 4</li>
-        </ol>
+        <p>
 
-        <h3>Photography</h3>
+        </p>
         <ul>
-          <li>"A newspaper lying over magazine" by <a href="https://unsplash.com/@ashni_ahlawat">@ashni_ahlawat</a></li>
-          <li>Lyocell clothing by Lyocell Info. https://lyocell.info/</li>
+          {% for item in resources %}
+          <li>{{ item.title }} (<a href="{{ item.url }}" target="_blank">{{ item.media }}</a>)</li>
+          {% endfor %}
         </ul>
+
       </div>
       </div>
 
